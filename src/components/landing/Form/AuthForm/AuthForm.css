@@ -1,0 +1,42 @@
+.auth {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.auth__form-container {
+  width: 32%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 880px) {
+  .auth__form-container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .auth__form-container {
+    width: 51%;
+    margin-top: 232px;
+    margin-bottom: 232px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .auth__form-container {
+    width: 68%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .auth__form-container {
+    width: 81.3%;
+    margin-top: 56px;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+}
