@@ -1,0 +1,39 @@
+.header {
+  height: 74px;
+  width: 100%;
+  background-color: #465DFF;
+  display: flex;
+  align-items: center;
+}
+
+.header__container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logged {
+  background-color: #fff;
+}
+
+.header__logo {
+  height: 38px;
+  width: 38px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .header__container {
+      width: 92%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__container {
+      width: 91%;
+  }
+}

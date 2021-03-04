@@ -1,0 +1,54 @@
+.input-profile__field {
+  position: relative;
+}
+
+.input-profile__input {
+  outline: none;
+  border: 0;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: right;
+  color: #000;
+  width: 100%;
+  height: 22px;
+  padding-bottom: 14px;
+  margin-top: 14px;
+}
+
+.input-profile__name {
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.input-profile__input:focus:valid + .input-profile__name {
+    color: #FF6838;
+}
+
+.input-profile__input:focus:invalid + .input-profile__name {
+  color: #FF004C;
+}
+
+.input-profile__error {
+  position: absolute;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  line-height: 12px;
+  color: #FF004C;
+  display: none;
+  top: 27px;
+}
+
+.input-profile__error_active {
+  display: block;
+}
