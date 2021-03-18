@@ -1,4 +1,5 @@
-export const BASE_URL = 'http://localhost:3001';
+import * as constants from '../utils/constants';
+export const BASE_URL = constants.PORT;
 
 let token;
 
