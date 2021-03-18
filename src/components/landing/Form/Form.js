@@ -1,6 +1,7 @@
 import React from 'react';
 import './Form.css';
 import { Link } from 'react-router-dom';
+import Preloader from '../../landing/Preloader/Preloader';
 
 function Form(props) {
 
@@ -12,8 +13,15 @@ function Form(props) {
     props.setReadOnly(false)
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.onSubmit();
+  };
+
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
+      {props.preloader &&
+        <Preloader />}
       <div>
         <h6 className={formTitle}>{props.title}</h6>
         {props.children}
@@ -21,8 +29,15 @@ function Form(props) {
       <div className="form__nav">
         {!props.loggedIn &&
           <div>
-            <span className="form__error">Что-то пошло не так...</span>
-            <button className="form__button">{props.buttonName}</button>
+            {props.formMessage &&
+              <span className="form__message">{props.formMessage}</span>
+            }
+            {!props.showButton &&
+              <button disabled className="form__button">{props.buttonName}</button>
+            }
+            {props.showButton &&
+              <button className="form__button form__button_active">{props.buttonName}</button>
+            }
             <div className="form__container_link">
               <p className="form__link-text">{props.linkText}</p>
               <Link to={props.linkRoute} className="form__link">{props.linkName}</Link>
@@ -31,16 +46,23 @@ function Form(props) {
         }
         {props.loggedIn &&
           <div className="form__nav-profile">
-            <span className="form__error">Что-то пошло не так...</span>
-            {props.readOnly &&
-              <button className="form__button-profile" onClick={setReadOnly}>{props.buttonName}</button>
+            {props.formMessage &&
+              <span className="form__message">{props.formMessage}</span>
             }
-            {!props.readOnly &&
+            {props.readOnly &&
+              <div className="form__nav-edit">
+                <button className="form__button-profile" onClick={setReadOnly}>{props.buttonName}</button>
+                <div className="form__container_link">
+                  <button className="form__button-profile form__link-profile" onClick={props.onSignOut}>{props.linkName}</button>
+                </div>
+              </div>
+            }
+            {props.showButton && !props.readOnly &&
               <button className="form__button form__button_active">{props.buttonNameSave}</button>
             }
-            <div className="form__container_link">
-              <Link to={props.linkRoute} className="form__link-profile">{props.linkName}</Link>
-            </div>
+            {!props.showButton && !props.readOnly &&
+              <button disabled className="form__button">{props.buttonNameSave}</button>
+            }
           </div>
         }
       </div>

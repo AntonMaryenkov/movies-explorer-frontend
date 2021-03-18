@@ -4,7 +4,6 @@ import './PopupNavigation.css';
 function PopupNavigation(props) {
 
   let popupNavigation = 'popup';
-  console.log(props.isOpen)
   if (props.isOpen) {
     popupNavigation += ' popup_is-opened';
   }

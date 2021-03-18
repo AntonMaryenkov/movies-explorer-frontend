@@ -1,30 +1,56 @@
 import React from 'react';
 import './MoviesCard.css';
-import img1 from '../../../../images/1.jpg';
 
 function MoviesCard(props) {
 
-  const [like, setLike] = React.useState(false)
-
   const cardLike = (
-    `movies-card__like ${like ? 'movies-card__like_active' : ''}`
+    `movies-card__like ${props.isLiked ? 'movies-card__like_active' : ''}`
   );
 
+  function getTimeFromMins(min) {
+    let hours = Math.trunc(min / 60);
+    let minutes = min % 60;
+    if (hours > 0) {
+      return hours + 'ч ' + minutes + 'м';
+    }
+    return minutes + 'м';
+  };
+
+  function onClickImg() {
+    if (props.pageSavedMovies) {
+      return window.open(props.traile);
+    }
+    window.open(props.trailerLink);
+  };
+
   function handleLikeClick() {
-    setLike(true);
-  }
+    if (props.isLiked) {
+      props.deleteMovie(props.id);
+
+    } else {
+      props.saveMovie(props);
+    }
+  };
+
+  function handleButtonDeleteClick() {
+    props.deleteMovie(props.movieId);
+  };
 
   return (
     <div className="movies-card">
-      <img className="movies-card__img" src={img1} alt=""></img>
+      {!props.pageSavedMovies ?
+        <img className="movies-card__img" src={`https://api.nomoreparties.co${props.image && props.image.url}`} onClick={onClickImg} alt=""></img>
+        :
+        <img className="movies-card__img" src={props.image} onClick={onClickImg} alt=""></img>
+      }
       <div className="movies-card__container_title-like">
-        <h6 className="movies-card__title">33 слова о дизайне</h6>
-        {!props.savedMovies ?
+        <h6 className="movies-card__title">{props.nameRU}</h6>
+        {!props.pageSavedMovies ?
           <button className={cardLike} onClick={handleLikeClick}></button>
           :
-          <button className="movies-card__button-delete"></button>}
+          <button className="movies-card__button-delete" onClick={handleButtonDeleteClick}></button>}
       </div>
-      <p className="movies-card__time">1ч42м</p>
+      <p className="movies-card__time">{getTimeFromMins(props.duration)}</p>
     </div>
 
   );

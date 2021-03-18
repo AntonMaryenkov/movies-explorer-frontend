@@ -45,10 +45,5 @@
   font-size: 10px;
   line-height: 12px;
   color: #FF004C;
-  display: none;
   top: 27px;
-}
-
-.input-profile__error_active {
-  display: block;
 }

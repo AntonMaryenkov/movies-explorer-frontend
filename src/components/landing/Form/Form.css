@@ -33,6 +33,12 @@
   align-items: center;
 }
 
+.form__nav-edit {
+  display: flex;
+  flex-direction: column;
+
+}
+
 .form__button {
   font-style: normal;
   font-weight: 500;
@@ -92,7 +98,6 @@
   flex-direction: row;
   justify-content: center;
   padding-top: 16px;
-  margin-bottom: 70px;
 }
 
 .form__link-text {
@@ -126,8 +131,8 @@
   margin-bottom: 40px;
 }
 
-.form__error {
-  display: none;
+.form__message {
+  display: flex;
   justify-content: center;
   font-style: normal;
   font-weight: 100;
@@ -137,10 +142,6 @@
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.form__error_active {
-  display: flex;
 }
 
 @media screen and (max-width: 768px) {
