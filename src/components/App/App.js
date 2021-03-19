@@ -71,6 +71,9 @@ function App() {
 
   const onRegister = (name, email, password) => {
     return MainApi.register(name, email, password)
+      .then(() => {
+        return onLogin(email, password);
+      })
       .catch(err => {
         console.log(err);
         return Promise.reject(err);

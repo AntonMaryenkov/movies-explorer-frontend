@@ -21,11 +21,9 @@ function Register(props) {
     props.onRegister(name.value, email.value, password.value)
       .catch(() => {
         setFormMessage('Неверные данные для регистрации. Попробуйте ещё.');
-      })
-      .finally(() => {
         setPreloader(false);
         setShowButton(true);
-      });
+      })
   };
 
   useEffect(() => {
