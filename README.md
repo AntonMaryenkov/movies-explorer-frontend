@@ -1,2 +1,5 @@
 # movies-explorer-frontend
-Дипломная работа. Верстка и JSX.
+https://movies-explorer.maryenkov.students.nomoredomains.icu
+https://api.movies-explorer.maryenkov.students.nomoredomains.icu
+
+
