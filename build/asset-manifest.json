@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fe9932a2.chunk.css",
+    "main.js": "/static/js/main.616a7621.chunk.js",
+    "main.js.map": "/static/js/main.616a7621.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fb5681ed.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fb5681ed.js.map",
+    "static/js/2.16573b3a.chunk.js": "/static/js/2.16573b3a.chunk.js",
+    "static/js/2.16573b3a.chunk.js.map": "/static/js/2.16573b3a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.fe9932a2.chunk.css.map": "/static/css/main.fe9932a2.chunk.css.map",
+    "static/js/2.16573b3a.chunk.js.LICENSE.txt": "/static/js/2.16573b3a.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Inter-Medium.cc6a8868.woff",
+    "static/media/aboutMePhoto.4f328356.jpg": "/static/media/aboutMePhoto.4f328356.jpg",
+    "static/media/MoviesCard.css": "/static/media/like.3fe7ded4.svg",
+    "static/media/Portfolio.css": "/static/media/link-icon.3430df53.svg",
+    "static/media/logo.047033fe.svg": "/static/media/logo.047033fe.svg",
+    "static/media/Navigation.css": "/static/media/navigation_icon-header.a6ef1a2a.svg",
+    "static/media/navigation-icon.593c6330.svg": "/static/media/navigation-icon.593c6330.svg",
+    "static/media/promo-logo.5a35c432.png": "/static/media/promo-logo.5a35c432.png",
+    "static/media/SearchForm.css": "/static/media/search-icon.311f719a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb5681ed.js",
+    "static/js/2.16573b3a.chunk.js",
+    "static/css/main.fe9932a2.chunk.css",
+    "static/js/main.616a7621.chunk.js"
+  ]
+}

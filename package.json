@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && scp -r ./build/* root@ovz1.antonmaryenkov.pr46m.vps.myjino.ru:/sites/movies-explorer"
+    "deploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
