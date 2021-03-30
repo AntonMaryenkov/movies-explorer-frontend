@@ -18,8 +18,9 @@ function MoviesCard(props) {
 
   function onClickImg() {
     if (props.pageSavedMovies) {
-      return window.open(props.traile);
+      return window.open(props.trailer);
     }
+
     window.open(props.trailerLink);
   };
 

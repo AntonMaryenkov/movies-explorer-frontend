@@ -39,11 +39,11 @@ function Navigation(props) {
           <div className="navigation__popup">
             <button className="navigation__close-icon" type="button" onClick={closePopup}></button>
             <div className="navigation__popup-container">
-              <NavLink exact to="/" className="navigation__button navigation__button-logged navigation__button-logged_popup" activeClassName="navigation__button-popup_active">Главная</NavLink>
-              <NavLink to="/movies" className="navigation__button navigation__button-logged navigation__button-logged_popup" activeClassName="navigation__button-popup_active">Фильмы</NavLink>
-              <NavLink to="/saved-movies" className="navigation__button navigation__button-logged navigation__button-logged_popup" activeClassName="navigation__button-popup_active">Сохранённые фильмы</NavLink>
+              <NavLink exact to="/" className="navigation__button navigation__button-logged navigation__button-logged_popup" activeClassName="navigation__button-popup_active" onClick={closePopup}>Главная</NavLink>
+              <NavLink to="/movies" className="navigation__button navigation__button-logged navigation__button-logged_popup" activeClassName="navigation__button-popup_active" onClick={closePopup}>Фильмы</NavLink>
+              <NavLink to="/saved-movies" className="navigation__button navigation__button-logged navigation__button-logged_popup" activeClassName="navigation__button-popup_active" onClick={closePopup}>Сохранённые фильмы</NavLink>
             </div>
-            <NavLink to="/profile" className="navigation__button navigation__button-profile navigation__button-profile_popup">
+            <NavLink to="/profile" className="navigation__button navigation__button-profile navigation__button-profile_popup" onClick={closePopup}>
               <img className="navigation__profile-icon" src={profileIcon} alt="иконка-человек"></img>
               <p className="navigation__button-profile_text">Аккаунт</p>
             </NavLink>
